@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subhash Kumar | My Website</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+    transition: 0.3s;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #38bdf8;
+}
+
+nav {
+    background: #1f2937;
+    padding: 14px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+section {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000012;
+}
+
+h2 {
+    color: #0284c7;
+    margin-bottom: 15px;
+}
+
+.hero {
+    text-align: center;
+    padding: 55px 20px;
+    background: linear-gradient(135deg, #0f172a, #0369a1);
+    color: white;
+    border-radius: 12px;
+}
+
+.hero h2 {
+    color: #7dd3fc;
+    font-size: 32px;
+}
+
+button, .btn {
+    background: #0284c7;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 8px 5px 0 0;
+    font-size: 15px;
+}
+
+button:hover, .btn:hover {
+    background: #0369a1;
+}
+
+.skill {
+    margin: 18px 0;
+}
+
+.bar {
+    height: 12px;
+    background: #dbeafe;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background: #0284c7;
+    transition: width 1.5s;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    padding: 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.video-box {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 15px 0;
+    background: #111;
+}
+
+.video-box iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #111827;
+    color: white;
+    margin-top: 30px;
+}
+
+#darkButton {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 20;
+}
+
+body.dark {
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+body.dark section {
+    background: #1e293b;
+    color: #e5e7eb;
+}
+
+body.dark .card {
+    background: #334155;
+    border-color: #475569;
+}
+
+body.dark input,
+body.dark textarea {
+    background: #334155;
+    color: white;
+    border-color: #64748b;
+}
+
+body.dark h2 {
+    color: #7dd3fc;
+}
+
+@media (max-width: 600px) {
+    section {
+        margin: 15px 10px;
+        padding: 18px;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Subhash Kumar</h1>
+    <p>Welcome to My Personal Website</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#youtube">YouTube</a>
+    <a href="#cv">My CV</a>
+    <a href="#login">Login</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+    <div class="hero">
+        <h2>Hello, I'm Subhash!</h2>
+        <p>I'm learning web design and creating new projects.</p>
+        <p>My goal is to become a skilled web developer.</p>
+        <button onclick="welcome()">Say Hello</button>
+        <a class="btn" href="#projects">View My Projects</a>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Hello! My name is Subhash Kumar. I am a student
+        and a beginner web designer. I am learning HTML,
+        CSS and JavaScript to build useful websites.
+    </p>
+    <p>
+        I also enjoy creating YouTube videos and learning
+        new digital skills.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skill">
+        <p>HTML - Beginner</p>
+        <div class="bar"><div class="progress" data-width="40%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>CSS - Beginner</p>
+        <div class="bar"><div class="progress" data-width="25%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>JavaScript - Learning</p>
+        <div class="bar"><div class="progress" data-width="15%"></div></div>
+    </div>
+
+    <p>These progress bars are sample values and can be updated as you learn.</p>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Project 1: Personal Website</h3>
+            <p>A website about me, my skills and my work.</p>
+            <button onclick="projectMessage('Personal Website')">View Details</button>
+        </div>
+
+        <div class="card">
+            <h3>Project 2: YouTube Channel</h3>
+            <p>My video creation and content journey.</p>
+            <a class="btn" href="https://www.youtube.com/@SubhashKumar-l5x7g"
+               target="_blank" rel="noopener">Open Channel</a>
+        </div>
+
+        <div class="card">
+            <h3>Project 3: Future Website</h3>
+            <p>I will add more projects as I learn web design.</p>
+            <button onclick="projectMessage('Future Website')">View Details</button>
+        </div>
+    </div>
+</section>
+
+<section id="youtube">
+    <h2>My YouTube Video</h2>
+    <p>Watch my video here. If it does not play, use the YouTube button below.</p>
+
+    <div class="video-box">
+        <iframe
+            src="https://www.youtube.com/embed/1A-AsGNvlFs"
+            title="Subhash Kumar YouTube Video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <a class="btn"
+       href="https://www.youtube.com/watch?v=1A-AsGNvlFs"
+       target="_blank" rel="noopener">
+       Watch on YouTube
+    </a>
+
+    <a class="btn"
+       href="https://www.youtube.com/@SubhashKumar-l5x7g"
+       target="_blank" rel="noopener">
+       Visit My Channel
+    </a>
+</section>
+
+<section id="cv">
+    <h2>My CV</h2>
+    <p>This is a demo button. A real CV file has not been added yet.</p>
+    <button onclick="downloadCV()">CV Information</button>
+</section>
+
+<section id="login">
+    <h2>Login Demo</h2>
+    <p>This is only a front-end demonstration, not a real secure login.</p>
+
+    <form onsubmit="loginUser(event)">
+        <label for="loginEmail">Email</label>
+        <input id="loginEmail" type="email" placeholder="Enter demo email" required>
+
+        <label for="loginPassword">Password</label>
+        <input id="loginPassword" type="password"
+               placeholder="Enter any demo password" required>
+
+        <button type="submit">Demo Login</button>
+    </form>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>This sample form does not send messages to an email address.</p>
+
+    <form onsubmit="sendMessage(event)">
+        <label for="visitorName">Your Name</label>
+        <input id="visitorName" type="text" placeholder="Enter your name" required>
+
+        <label for="visitorEmail">Your Email</label>
+        <input id="visitorEmail" type="email" placeholder="Enter your email" required>
+
+        <label for="visitorMessage">Your Message</label>
+        <textarea id="visitorMessage" placeholder="Write your message" required></textarea>
+
+        <button type="submit">Send Demo Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Subhash Kumar | My Personal Website</p>
+    <p>Made while learning HTML, CSS and JavaScript.</p>
+</footer>
+
+<button id="darkButton" onclick="toggleDarkMode()">Dark Mode</button>
+
+<script>
+function welcome() {
+    alert("Hello! Welcome to Subhash Kumar's website.");
+}
+
+function projectMessage(projectName) {
+    alert(projectName + " - More details will be added soon!");
+}
+
+function downloadCV() {
+    alert("Your CV has not been added yet. You can create it later.");
+}
+
+function loginUser(event) {
+    event.preventDefault();
+    alert("Demo only! This website does not create or verify real accounts.");
+}
+
+function sendMessage(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("visitorName").value;
+    alert("Thank you, " + name + "! This demo form does not send your message.");
+    event.target.reset();
+}
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+
+    const button = document.getElementById("darkButton");
+    button.textContent = document.body.classList.contains("dark")
+        ? "Light Mode"
+        : "Dark Mode";
+}
+
+window.addEventListener("load", function() {
+    document.querySelectorAll(".progress").forEach(function(bar) {
+        bar.style.width = bar.dataset.width;
+    });
+});
+</script>
+
+</body>
+</html>
